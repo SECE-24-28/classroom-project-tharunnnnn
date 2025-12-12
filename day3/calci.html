@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+           function demo1()
+           {
+            let name=document.getElementById("t1").value;
+            let b=document.getElementById("t2").value;
+            let x=parseInt(name);
+            let y=parseInt(b);
+            let z=x+y;
+            document.getElementById("t3").value=z;
+            
+           }
+            function demo2()
+           {
+            let name=document.getElementById("t1").value;
+            let b=document.getElementById("t2").value;
+            let x=parseInt(name);
+            let y=parseInt(b);
+            let z=x-y;
+            document.getElementById("t3").value=z;
+            
+           }
+           function demo3()
+           {
+            let name=document.getElementById("t1").value;
+            let b=document.getElementById("t2").value;
+            let x=parseInt(name);
+            let y=parseInt(b);
+            let z=x*y;
+            document.getElementById("t3").value=z;
+            
+           }
+           function demo4()
+           {
+            let name=document.getElementById("t1").value;
+            let b=document.getElementById("t2").value;
+            let x=parseInt(name);
+            let y=parseInt(b);
+            let z=x/y;
+            document.getElementById("t3").value=z;
+            
+           }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Enter the first number to add" id="t1">
+    <input type="number" placeholder="Enter the second number to add" id="t2">
+    <input type="number"  id="t3">
+
+    <button onclick="demo1()">+</button>
+    <button onclick="demo2()">-</button>
+    <button onclick="demo3()">*</button>
+    <button onclick="demo4()">/</button>
+</body>
+</html>

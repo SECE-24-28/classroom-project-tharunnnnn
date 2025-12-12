@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        #error{
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p id="error"></p>
+
+        <label>User Name</label><br>
+        <input type="text" id="username"><br><br>
+
+        <label>Email</label><br>
+        <input type="email" id="email"><br><br>
+
+        <button id="submit" type="submit">Submit</button>
+
+        <p id="result"></p>
+    </form>
+
+    <script>
+        let er = document.getElementById("error");
+        let us = document.getElementById("username");
+        let em = document.getElementById("email");
+        let sub = document.getElementById("submit");
+        let result = document.getElementById("result");
+
+        sub.addEventListener("click", (e) => {
+            e.preventDefault(); 
+
+            if (us.value.trim() === "" || em.value.trim() === "") {
+                er.innerHTML = "Fields Should Not Be Empty...";
+                result.innerHTML = "";   
+            } 
+            else {
+                er.innerHTML = "";
+                result.innerHTML = 
+                    "<br><b>Registration Successful</b><br>" +
+                    "User Name : " + us.value + "<br>" +
+                    "Email : " + em.value;
+            }
+        });
+    </script>
+</body>
+</html>
